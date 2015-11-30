@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;gocode&gt;">
+    <CLASSES>
+      <root url="file://C:/goappengine/urlapp/src/github.com" />
+      <root url="file://C:/goappengine/urlapp/src/golang.org" />
+    </CLASSES>
+    <SOURCES />
+    <excluded>
+      <root url="file://C:/goappengine/urlapp/src/github.com/gorilla/context/.git" />
+      <root url="file://C:/goappengine/urlapp/src/github.com/gorilla/securecookie/.git" />
+      <root url="file://C:/goappengine/urlapp/src/golang.org/x/net/http2/testdata" />
+      <root url="file://C:/goappengine/urlapp/src/golang.org/x/mobile/bind/testdata" />
+      <root url="file://C:/goappengine/urlapp/src/github.com/gorilla/sessions/.git" />
+      <root url="file://C:/goappengine/urlapp/src/golang.org/x/mobile/testdata" />
+      <root url="file://C:/goappengine/urlapp/src/golang.org/x/mobile/.git" />
+      <root url="file://$PROJECT_DIR$" />
+      <root url="file://C:/goappengine/urlapp/src/golang.org/x/net/html/charset/testdata" />
+      <root url="file://C:/goappengine/urlapp/src/golang.org/x/net/html/testdata" />
+      <root url="file://C:/goappengine/urlapp/src/golang.org/x/net/.git" />
+      <root url="file://C:/goappengine/urlapp/src/github.com/nu7hatch/gouuid/.git" />
+    </excluded>
+  </library>
+</component>
