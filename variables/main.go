@@ -7,4 +7,6 @@ import {
 
 func main() {
 
+fmt.Println(variables.mynames())
+
 }
