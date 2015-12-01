@@ -2,10 +2,14 @@ package main
 
 import "fmt"
 
-const age int
+	var age int
+	var name string
 
 func main() {
 
-	const age=23
-	fmt.println("age= ", age)
+	 age=23
+	 name="alaikya"
+
+	fmt.Println("name= ", name)
+	fmt.Println("age= ", age)
 }
