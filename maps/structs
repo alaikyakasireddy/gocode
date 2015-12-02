@@ -1,38 +1,22 @@
 package main
 import "fmt"
 
+type customer struct {
+	name string
+	age int
+}
+
 func main () {
-	//slice of ints
-	mySlice := []int{1, 2, 3}
-	fmt.Println(mySlice)
+	alice := customer{name: "Alice", age:21}
+	bob := customer{name:"Bob"}
 
-	//slice of strings
-	mySecondSlice := []string{"hello", "world"}
-	fmt.Println(mySecondSlice)
+	fmt.Println(alice.name, alice.age)
+	fmt.Println(bob.name)
 
-	//slice of ints using make
-	var myThirdSlice []int = make([]int, 5, 10)
-	myThirdSlice[0] = 1
-	myThirdSlice[1] = 2
-	myThirdSlice[2] = 3
-	myThirdSlice[3] = 4
-	myThirdSlice[4] = 5
-	fmt.Println(myThirdSlice)
-	fmt.Println(len(myThirdSlice))
-	fmt.Println(cap(myThirdSlice))
+	bob.age = 34
+	fmt.Println(bob.age)
 
-	//append a slice to a slice
-	myNewSlice := []int{1, 2, 3}
-	myOtherSlice := []int{4, 5, 6}
-	fmt.Println(append(myNewSlice, myOtherSlice...))
-
-
-	//delete an element from a slice
-	myNewSlice = append(myNewSlice[:3], myNewSlice[4:]...)
-	fmt.Println(myNewSlice)
-
-	//index out of range error
-	myLastSlice := make([]int, 2, 3)
-	myLastSlice[2] = 7
+	//yes
+	//no
 
 }
