@@ -1,0 +1,56 @@
+/*
+ * Cover
+ */
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .mastfoot,
+  .cover-container {
+    width: 700px;
+  }
+}
+
+/* Heading */
+.cover-heading {
+  font-family: Handlee, cursive;
+}
+
+h1.cover-heading {
+  color: white;
+}
+
+/* Links */
+div.mastfoot div.inner p a {
+  color: white;
+}
+
+/* Black text background in center */
+.cover {
+  background-color: black;
+  opacity: 0.75;
+  border-radius: 30px;
+}
