@@ -1,0 +1,45 @@
+# Plans for the website:
+
+Add ability to use Google account for sign-in
+Add "About" page with story of how the website started, why I made it, etc.
+Buy a Google domain name for the site and use that instead of appspot domain.
+Add "Support" page with ability to email me directly with feature requests, 
+	bug reports, problems they've expereinced, etc. using the email tied to the domain name.
+Add "Donate" page with various ways of donating to me directly. Maybe set up an account 
+	just for the donations + charges for the site's operation so it can be self-sustaining. 
+	Explain why I'm	asking for donations.
+Make sure the site works awesome in mobile. This may be the main way people use the site.
+Develop an Android app for the site, maybe using the website inside an application shell.
+Add meta information to the site so it will show up in Google and Bing search results.
+Add advertisments to the site so it can make some revenue. These will be noninvasive, 
+	on the sides of the pages. Proceeds will go towards the site's operation.
+Investigate if google cloud and app engine and datstore are the way to go long-term, 
+	in terms of cost-effectiveness. Maybe migrate to AWS or Azure as needed.
+Make a terms of use page explaining that any content they post may be completely public and I 
+	will not be held responsible for anything. Encourage them to use a different password from 
+	any other site if they make a local account, as security is very important. Explain that
+	their content will remain entirely theirs and that all scenes belong to the author who wrote them 
+	irrespective of the stories they are a part of, and all users maintain the rights to their own writing.
+	Users abusing the site will be removed (not sure how to do this?)
+Advertise the site on social networks and other creative writing platforms to attract users. 
+	Maybe do this through Google ads. 
+Add email authentication before the signup process is complete, so they have to verify their email
+	address is valid before proceeding. This will prevent spammers and blacklisted users coming back.
+
+# Features to Add:
+
+Social Network Support
+	Users can friend each other, set privacy of their stories, send messages, etc.
+
+Genres
+	Each story categorized into a genre from a list of defaults or they can make their own,
+	and users can browse stories by genre.
+
+Profile
+	Add "last active" field to profiles so people know who has not logged in for a while.
+	Upload a profile picture.
+	
+Read Later / Contribute / Follow
+	Add ability to follow a story or user and get notified of their new publications.
+	Add stories to your library so you can read them later.
+	Automatically add stories they join to a special page so they can easily find them to work on them.
