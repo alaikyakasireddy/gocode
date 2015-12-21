@@ -1,0 +1,31 @@
+{{ template "header" . }}
+   
+<div class="container">
+
+  <div class="blog-header">
+    <h1 class="blog-title">New Scene</h1>
+  </div>
+
+  <div class="row">
+    <div class="container">
+      <form action="/api/scene" method="post" class="scene-form">
+        <select name="story" class="form-control">
+          {{ range .OwnerStories }}
+          <option value="{{ .Title }}">{{ .Title }}</option>
+          {{ end }}
+        </select>
+        <input type="text" name="name" class="form-control" placeholder="Scene Name">
+        <textarea class="form-control" rows="15" name="scene" placeholder="Scene Content"></textarea>
+        <button class="btn btn-primary form-control" type="submit">Submit</button>
+      </form>	
+    </div>
+  </div>
+
+</div>
+
+{{ template "footer" }}
+
+<!--Use class "active" to change pointer on navbar-->
+<script>
+  document.getElementById("newScene").setAttribute("class", "active blog-nav-item");
+</script>
