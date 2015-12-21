@@ -1,0 +1,127 @@
+/*
+ * Navbar
+ */
+.blog-masthead {
+  background-color: #282828; /*#428bca;*/
+  -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+          box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+}
+
+/* Nav links */
+.blog-nav-item {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-size: large;
+  font-weight: 500;
+  color: white;
+}
+.blog-nav-item:hover,
+.blog-nav-item:focus,
+.navbar-brand:hover,
+.navbar-brand:focus {
+  color: #AEAEAE;
+  text-decoration: none;
+}
+
+/* Active state gets a caret at the bottom */
+.blog-nav .active {
+  color: #fff;
+}
+.blog-nav .active:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  vertical-align: middle;
+  content: " ";
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid;
+  border-left: 5px solid transparent;
+}
+
+
+/* Brand */
+.navbar-brand {
+  text-align: left;
+  color: white;
+  font-weight: bold;
+  font-family: 'Handlee', cursive;
+  font-size: 24px;
+  display: inline;
+}
+
+.blog-nav {
+  display: inline;
+}
+
+.nav-container {
+  display: inline-block;
+}
+
+/* Login, Signup links */
+a.login, a.signup {
+  font-size: medium;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+/* Username */
+.username {
+    color: white;
+    padding: 10px;
+    font-family: Handlee, cursive;
+    font-size: large;
+    margin-top: 4px;
+}
+
+.navbar-toggle {
+  border:1px solid white;
+}
+.navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+ul.navbar-nav li a:hover,
+ul.navbar-nav li a:focus {
+  background-color: #282828;
+  color: #AEAEAE;
+  text-decoration: none;
+}
+
+ul.navbar-nav li a.btn-danger:hover,
+ul.navbar-nav li a.btn-danger:focus {
+  color:#fff;
+  background-color:#c9302c;
+  border-color:#ac2925
+}
+
+ul.navbar-nav li a.btn-primary:hover,
+ul.navbar-nav li a.btn-primary:focus {
+  color:#fff;
+  background-color:#286090;
+  border-color:#204d74;
+}
+
+ul.navbar-nav li a.btn-success:hover,
+ul.navbar-nav li a.btn-success:focus {
+  color:#fff;
+  background-color:#449d44;
+  border-color:#398439;
+}
+
+ul.navbar-nav li a.btn {
+  padding: 6px 12px;
+  margin-top: 10px;
+  margin-right: 15px;
+}
+
+.navbar-nav {
+    margin: 0px -15px;
+}
+
+.container-fluid {
+  padding-left: 0;
+}
