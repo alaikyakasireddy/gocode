@@ -1,0 +1,35 @@
+{{ define "scene" }}
+<div class="blog-post">
+	<h2 class="blog-post-title">{{ .Name }}</h2>
+	<p class="blog-post-meta">{{ .CreatedDate }} by <a href="/user/{{ .Author }}">{{ .Author }}</a></p>
+	<p>{{ .Content }}</p>
+</div>
+{{ end }}
+
+
+{{ define "blog-footer" }}
+<footer class="blog-footer">
+	<a href="#">Back to top</a>
+</footer>
+{{ end }}
+
+
+{{ define "blog-preview" }}
+<a class="list-group-item" href="/view/{{ .Link }}/{{ .Owner }}">
+	<!--{{ template "user-thumbnail"}}-->
+	<h3>{{ .Title }}</h3>
+	<h4>{{ .Owner }}</h4>
+	<p>{{ .Description }}</p>
+	<p>{{ .Plot }}</p>
+</a>
+{{ end }}
+
+{{ define "blog-links" }}
+<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+	<div class="sidebar-module sidebar-module-inset">
+		<a class="join-request" href="/api/join">
+			<button class="btn btn-primary">Join</button>
+		</a>
+	</div>
+</div>
+{{ end }}
