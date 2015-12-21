@@ -1,0 +1,83 @@
+{{ template "header" . }}
+
+<div class="container">
+    <div class="blog-header">
+        <h1 class="blog-title">Edit Profile</h1>
+    </div>
+  
+	<div class="container">
+		<form class="form" id="form-edit-profile" action="/api/editProfile" method="post">
+			<h2 class="form-heading">Edit your profile</h2>
+			
+			<input type="email" name="email" id="email" class="form-control" placeholder="Email address" value="{{ .Email }}" required autofocus>
+			<p class="form-field-err" id="email-err"></p>
+			
+			<textarea id="about" name="about" class="form-control" rows="3" placeholder="About me" autofocus>{{ .About }}</textarea>
+			
+			<input type="url" name="image" id="image" class="form-control" placeholder="Profile Picture URL" value="{{ .Image }}" autofocus>
+			
+			<button class="btn btn-lg btn-primary btn-block" type="submit" id="btn-edit-profile">Save</button>
+		</form>
+	</div>
+	
+	<div class="container margin-top">
+		<form class="form" id="form-change-password" action="/api/editPassword" method="post">
+			<h2 class="form-heading">Change your password</h2>
+			<p class="form-field-err" id="form-err-password"></p>
+			
+			<input type="password" name="password" id="password" class="form-control" placeholder="Old Password" required>
+			
+			<input type="password" name="password1" id="password1" class="form-control" placeholder="New Password" required>
+			
+			<input type="password" name="password2" id="password2" class="form-control" placeholder="New Password" required>
+			<p class="form-field-err" id="password-err"></p>
+	
+			<button class="btn btn-lg btn-primary btn-block" type="submit" id="btn-change-password">Submit</button>
+		</form>
+	</div>
+    
+</div>
+    
+{{ template "footer" }}
+
+<script>
+        var formPassword = document.querySelector('#form-change-password');
+        var p1 = document.querySelector('#password1');
+        var p2 = document.querySelector('#password2');
+        var btnPassword = document.querySelector('#btn-change-password');
+        var pErr = document.querySelector('#password-err');
+        var formErrPassword = document.querySelector("#form-err-password");
+        
+        // listen for submit button click
+        formPassword.addEventListener('submit', function(e){
+            //check passwords the same
+            var ok = validatePasswords();
+            if (!ok) {
+                e.preventDefault();
+                formErr.textContent = "There was an error submitting the form.";
+                document.getElementById("form-err").style.display = "block";
+                return;
+            }
+            formErr.textContent = "";
+        });
+        
+        
+		// Validate passwords
+        function validatePasswords() {
+            pErr.textContent = '';
+            if (p1.value === '') {
+                pErr.textContent = 'Enter a password.';
+                document.getElementById("password-err").style.display = "block";
+                return false;
+            }
+            if (p1.value !== p2.value) {
+                pErr.textContent = 'Your passwords did not match. Please re-enter your password.';
+                document.getElementById("password-err").style.display = "block";
+                p1.value = '';
+                p2.value = '';
+                return false;
+            }
+            document.getElementById("password-err").style.display = "none";
+            return true;
+        };
+    </script>
