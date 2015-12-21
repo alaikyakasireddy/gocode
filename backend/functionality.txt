@@ -1,0 +1,8 @@
+In this repo I added the ability to create a new story and add scenes to that story.
+The two are both stored in datastore. In the future, scenes will have to be stored in 
+Google Cloud Storage because they are supposed to be large. Hence the commented out storage.go.
+Stories have a title, plot, and description. Scenes are the components of stories, and include
+content and a scene name. Stories can be browsed using the "Browse" page and viewed by clicking on them. 
+This is where the scenes are displayed, in chronological order. The idea is that users can write
+their stories, browse and read others' stories, and (in the future) join another's story and contribute
+to them collaboritvely. 
