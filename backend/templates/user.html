@@ -1,0 +1,89 @@
+{{ define "user-profile" }}
+<table class="user-profile table">
+	{{ if .IsMe }}
+		<tr>
+			<td><strong>Email</strong></td>
+			<td>{{ .Email }}</td>
+		</tr>
+	{{ end }}
+	<tr>
+		<td><strong>About</strong></td>
+		<td>{{ .About }}</td>
+	</tr>
+	<tr>
+		<td><strong>Stories</strong></td>
+		<td>
+			<ul>
+				{{ range .OwnerStories }}
+					<li><a href="/view/{{ .Link }}/{{ .Owner }}" class="blog-link">{{ .Title }}</a></li>
+				{{ end }}
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td><strong>Contributing to</strong></td>
+		<td>
+			<ul>
+				{{ range .ContributingStories }}
+					<li><a href="/view/{{ .Link }}/{{ .Owner }}" class="blog-link">{{ .Title }}</a></li>
+				{{ end }}
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td><strong>Member Since</strong></td>
+		<td>{{ .JoinDate }}</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+
+{{ if .IsMe }}
+<div class="edit-profile">
+	<a class="btn btn-primary" href="/editProfile" class="edit-profile">Edit</a> 
+</div>
+{{ end }}
+
+{{ end }}
+
+
+{{ define "user-picture" }}
+	{{ if . }}
+		<img src="{{ . }}" class="profile-pic-large" />	
+	{{ else }}
+		<img src="http://www.porticodesign.com/wp-content/uploads/2014/03/blank-person-07d1653f840307220b203ecb834f5904.png" class="profile-pic-large" />	
+	{{ end }}
+{{ end }}
+
+
+{{ define "user-thumbnail" }}
+<div class="user-picture-thumbnail">
+	{{ if . }}
+		<img src="{{ . }}" class="profile-pic-small" />	
+	{{ else }}
+		<img src="http://www.porticodesign.com/wp-content/uploads/2014/03/blank-person-07d1653f840307220b203ecb834f5904.png" class="profile-pic-small" />	
+	{{ end }}
+</div>
+{{ end }}
+
+
+{{ define "about" }}
+<a class="author-link" href="/user/{{ .Username }}">
+	<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+		<div class="sidebar-module sidebar-module-inset">
+			<div class="user-picture-thumbnail margin-bottom">
+				{{ if .Image }}
+					<img src="{{ .Image }}" class="profile-pic-small" />	
+				{{ else }}
+					<img src="http://www.porticodesign.com/wp-content/uploads/2014/03/blank-person-07d1653f840307220b203ecb834f5904.png" class="profile-pic-small" />	
+				{{ end }}
+			</div>
+			<h2 class="about">About the Owner</h2>
+			<h3>{{ .Username }}</h3>
+			<p>{{ .About }}</p>
+		</div>
+	</div>
+</a>
+{{ end }}
