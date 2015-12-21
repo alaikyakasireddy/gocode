@@ -1,0 +1,37 @@
+/*
+* User Profile
+*/
+table.user-profile td ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/*
+* Profile Picture
+*/
+img.profile-pic-large {
+  width: 250px;
+}
+
+img.profile-pic-small {
+  width: 150px;
+}
+
+.no-background {
+  background: none;
+}
+
+div.user-picture-thumbnail {
+  display: inline-block;
+  float: left;
+  margin-right: 20px;
+}
+
+div.margin-bottom {
+  margin-bottom: 20px;
+}
+
+/* Edit Profile Button */
+.edit-profile {
+  text-align: center;
+}
